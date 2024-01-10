@@ -14,4 +14,10 @@ import static org.junit.Assert.assertTrue;
  */
 public class FailingTest {
 
+@Test(timeout = 10)
+        public void testInfiniteLoopWithInfiniteInput() {
+            App.infiniteLoop(Double.POSITIVE_INFINITY);
+            fail();
+        }
+  
 }
